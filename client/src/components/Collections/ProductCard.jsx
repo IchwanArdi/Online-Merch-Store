@@ -6,7 +6,7 @@ function ProductCard() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch('http://server-production-45df.up.railway.app/shop')
+    fetch('https://server-production-45df.up.railway.app/shop')
       .then((res) => res.json())
       .then((result) => {
         setData(result); // langsung dapat 5 terbaru dari backend
