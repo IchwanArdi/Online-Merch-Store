@@ -2,7 +2,7 @@
 // import axios from 'axios';
 import './App.css';
 
-import AllProductListCard from './components/allProductList/AllProductListCard';
+import AllProductListCard from './components/AllProductList/AllProductListCard';
 import ProductCard from './components/Collections/ProductCard';
 import Footer from './components/Footer/Footer';
 import Carousel from './components/Header/Carousel';
