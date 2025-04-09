@@ -7,7 +7,7 @@ function AllProductListCard() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/randomAllShop')
+    fetch('http://server-production-45df.up.railway.app/randomAllShop')
       .then((res) => res.json())
       .then((result) => {
         setData(result); // langsung dapat 8 terbaru dari backend
