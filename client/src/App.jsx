@@ -7,6 +7,8 @@ import Footer from './components/Footer/Footer';
 import Carousel from './components/Header/Carousel';
 import ProductListCard from './components/ProductList/ProductListCard';
 import Information from '../src/components/Header/Information'; // tambahkan ini
+import ShowAllCollections from './components/Collections/ShowAllCollections';
+import ShowAllProduct from './components/AllProductList/ShowAllProduct';
 
 function Home() {
   return (
@@ -25,6 +27,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Information" element={<Information />} />
+        <Route path="/collections/straight-edge-collection" element={<ShowAllCollections />} />
+        <Route path="/collections/all-products" element={<ShowAllProduct />} />
       </Routes>
       <Footer />
     </Router>
