@@ -7,8 +7,8 @@ const About = () => {
         <h1 className="text-4xl md:text-5xl font-extrabold text-center text-cyan-900">Tentang Website Ini</h1>
 
         <p className="text-lg leading-relaxed text-justify">
-          Website ini terinspirasi dari seorang YouTuber bernama <span className="font-semibold text-cyan-800">Steeze Kane</span>, yang memiliki online store sendiri dengan gaya yang khas dan modern. Terinspirasi dari semangat kreatif dan
-          gaya streetwear yang ditampilkan oleh Kane, website ini bertujuan menjadi platform yang menyajikan produk-produk eksklusif dengan desain yang orisinal dan pengalaman pengguna yang memuaskan.
+          Website ini dibuat sebagai proyek latihan untuk mengembangkan keterampilan dalam membangun aplikasi full-stack menggunakan teknologi MERN (MongoDB, Express.js, React.js, Node.js). Saya terinspirasi oleh berbagai contoh online
+          store, salah satunya oleh YouTuber <span className="font-semibold text-cyan-800">Steeze Kane</span>, yang memiliki online store sendiri dengan desain yang modern dan fungsional.
         </p>
 
         <p className="text-lg leading-relaxed text-justify">
@@ -18,22 +18,21 @@ const About = () => {
         </p>
 
         <p className="text-lg leading-relaxed text-justify">
-          Website ini juga menggunakan teknologi back-end seperti <span className="font-medium text-cyan-800">Express.js</span> untuk menangani server dan routing yang efisien, serta{' '}
-          <span className="font-medium text-cyan-800">MongoDB</span> sebagai database NoSQL yang memungkinkan penyimpanan data produk dan pengguna secara fleksibel. Dengan kombinasi ini, website dapat memberikan pengalaman berbelanja yang
-          cepat dan responsif di kedua sisi, baik front-end maupun back-end.
+          Untuk sisi back-end, saya menggunakan <span className="font-medium text-cyan-800">Express.js</span> untuk menangani server dan routing yang efisien. <span className="font-medium text-cyan-800">MongoDB</span> dipilih sebagai
+          database NoSQL untuk penyimpanan data produk dan pengguna, yang memungkinkan sistem ini bekerja secara fleksibel dan skalabel.
         </p>
 
         <p className="text-lg leading-relaxed text-justify">
-          Website ini masih dalam tahap <span className="font-semibold">pengembangan</span>. Beberapa fitur akan terus ditambahkan, termasuk sistem autentikasi pengguna, halaman checkout, serta dashboard admin untuk mengelola produk. Kami
-          berkomitmen untuk terus meningkatkan kualitas website agar dapat memberikan pengalaman berbelanja yang lebih baik bagi para pengguna.
+          Website ini masih dalam tahap <span className="font-semibold">pengembangan</span>. Fitur-fitur baru akan terus ditambahkan, termasuk sistem autentikasi pengguna, halaman checkout, dan dashboard admin untuk mengelola produk. Saya
+          berkomitmen untuk terus meningkatkan website ini agar dapat memberikan pengalaman berbelanja yang lebih baik bagi penggunanya.
         </p>
 
         <div className="bg-cyan-100 border border-cyan-200 p-5 rounded-xl shadow-md">
-          <p className="text-lg text-gray-700">Jika kamu seorang developer atau seseorang yang tertarik untuk berkontribusi, kamu sangat dipersilakan untuk berkolaborasi lewat GitHub saya:</p>
+          <p className="text-lg text-gray-700">Jika kamu seorang developer atau tertarik untuk berkontribusi, kamu bisa berkolaborasi melalui GitHub saya:</p>
           <p className="mt-3 text-cyan-800 font-semibold">
             👉{' '}
             <a href="https://github.com/IchwanArdi/Online-Merch-Store" target="_blank" rel="noopener noreferrer" className="underline hover:text-cyan-600">
-              https://github.com/IchwanArdi/Online-Merch-Store
+              github.com/IchwanArdi/Online-Merch-Store
             </a>
           </p>
         </div>
