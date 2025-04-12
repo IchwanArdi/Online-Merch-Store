@@ -1,0 +1,55 @@
+/* Animasi slide dari atas */
+@keyframes slideInTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOutTop {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+/* Animasi slide dari kanan */
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Kelas untuk slide dari atas */
+.animate-slideInTop {
+  animation: slideInTop 0.3s ease-out forwards;
+}
+
+.animate-slideOutTop {
+  animation: slideOutTop 0.3s ease-in forwards;
+}
+
+/* Kelas untuk slide dari kanan */
+.animate-slideInRight {
+  animation: slideInRight 0.3s ease-out forwards;
+}
+
+.animate-slideOutRight {
+  animation: slideOutRight 0.3s ease-in forwards;
+}

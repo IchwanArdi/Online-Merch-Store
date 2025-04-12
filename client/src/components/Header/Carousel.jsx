@@ -79,6 +79,7 @@ export default function Carousel() {
       {/* Slides */}
       <div
         className="flex transition-transform duration-700 ease-in-out"
+        data-aos="zoom-in"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         onMouseDown={(e) => handleStart(e.clientX)}
         onMouseMove={(e) => handleMove(e.clientX)}
@@ -89,7 +90,7 @@ export default function Carousel() {
         onTouchEnd={handleEnd}
       >
         {slides.map((slide, index) => (
-          <div key={index} className="min-w-full h-[550px] md:h-[700px] relative">
+          <div key={index} className="min-w-full h-[550px] md:h-[700px] relative" data-aos="zoom-in" data-aos-duration="1000">
             <img src={slide.image} className="w-full h-full object-cover" alt={`Slide ${index + 1}`} draggable={false} />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
             <div className={`absolute text-white max-w-lg ${index === 0 ? 'top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center' : 'bottom-15 left-10 md:left-20 xl:left-35 md:bottom-20'}`} data-aos="zoom-in">

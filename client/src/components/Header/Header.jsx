@@ -2,13 +2,17 @@ import { useState } from 'react';
 import search from '../../assets/search.png';
 import cart from '../../assets/cart.png';
 import Search from './Search';
+import CartList from './CartSidebar';
 
 function Header() {
   const [showSearch, setShowSearch] = useState(false);
+  const [showCart, setshowCart] = useState(false);
 
   return (
     <>
       {showSearch && <Search onClose={() => setShowSearch(false)} />}
+      {showCart && <CartList onClose={() => setshowCart(false)} />}
+
       <header className="w-full absolute mx-auto z-10 bg-transparent">
         <div className="container mx-auto px-5 lg:px-20 lg:py-5">
           <div className="flex py-5 text-white items-center">
@@ -39,7 +43,7 @@ function Header() {
                   <img src={search} alt="icon search" className=" w-7 md:w-10 filter invert cursor-pointer" onClick={() => setShowSearch(true)} />
                 </li>
                 <li>
-                  <img src={cart} alt="icon cart" className=" w-7 md:w-10 filter invert cursor-pointer" />
+                  <img src={cart} alt="icon cart" className=" w-7 md:w-10 filter invert cursor-pointer" onClick={() => setshowCart(true)} />
                 </li>
               </ul>
             </div>
