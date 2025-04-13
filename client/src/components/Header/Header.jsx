@@ -8,28 +8,33 @@ import { Link } from 'react-router-dom';
 
 function Header({ darkMode = false }) {
   const [showSearch, setShowSearch] = useState(false);
-  const [showCart, setshowCart] = useState(false);
+  const [showCart, setShowCart] = useState(false);
 
   const textColor = darkMode ? 'text-black' : 'text-white';
   const iconFilter = darkMode ? '' : 'invert';
+  const borderBottom = darkMode ? 'border-b-2 border-slate-200' : '';
+
+  const information = !darkMode && (
+    <div id="information" className="relative top-0 w-full z-10 bg-cyan-900 text-white shadow-md py-2 flex items-center justify-center gap-3 px-4">
+      <img src={icon} alt="Info Icon" className="w-5 h-5 filter invert" />
+      <p className="text-sm md:text-base">
+        Ketahui lebih dalam tentang{' '}
+        <Link to="/Information" className="font-semibold underline underline-offset-2 hover:text-white/90">
+          website ini
+        </Link>
+      </p>
+    </div>
+  );
 
   return (
     <>
-      <div id="information" className="relative top-0 w-full z-10 bg-cyan-900 text-white shadow-md py-2 flex items-center justify-center gap-3 px-4">
-        <img src={icon} alt="Info Icon" className="w-5 h-5 filter invert" />
-        <p className="text-sm md:text-base">
-          Ketahui lebih dalam tentang{' '}
-          <Link to="/Information" className="font-semibold underline underline-offset-2 hover:text-white/90">
-            website ini
-          </Link>
-        </p>
-      </div>
+      {information}
 
       {showSearch && <Search onClose={() => setShowSearch(false)} />}
-      {showCart && <CartList onClose={() => setshowCart(false)} />}
+      {showCart && <CartList onClose={() => setShowCart(false)} />}
 
-      <header className="w-full absolute mx-auto z-10 xl:px-20">
-        <div className="container mx-auto px-5 lg:px-20 ">
+      <header className={`w-full absolute mx-auto z-10 xl:px-20 ${borderBottom}`}>
+        <div className="container mx-auto px-5 lg:px-20">
           <div className={`flex py-5 items-center font-extrabold ${textColor}`}>
             <nav className="flex items-center space-x-20">
               <Link to={'/'}>
@@ -60,13 +65,12 @@ function Header({ darkMode = false }) {
                   <img src={search} alt="icon search" className={`w-7 md:w-10 filter cursor-pointer ${iconFilter}`} onClick={() => setShowSearch(true)} />
                 </li>
                 <li>
-                  <img src={cart} alt="icon cart" className={`w-7 md:w-10 filter cursor-pointer ${iconFilter}`} onClick={() => setshowCart(true)} />
+                  <img src={cart} alt="icon cart" className={`w-7 md:w-10 filter cursor-pointer ${iconFilter}`} onClick={() => setShowCart(true)} />
                 </li>
               </ul>
             </div>
           </div>
         </div>
-        {darkMode && <hr className="text-slate-400 " />}
       </header>
     </>
   );

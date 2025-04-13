@@ -21,13 +21,13 @@ function ShowAllCollections() {
   return (
     <div>
       <Header darkMode />
-      <div className="xl:px-30 ">
+      <div className="xl:px-30 py-10">
         <CollectionSection title="All Products" showViewAll={false} />
         <section className="px-3 border-b-2 border-slate-200 ">
           <div className="container mx-auto my-3">
             <div className="flex flex-wrap justify-around mb-2" data-aos="zoom-in" data-aos-duration="1000">
               {data.map((product, index) => (
-                <AllShopSection key={index} image={product.gambar} name={product.nama} price={product.price} stock={product.stock} isNew={product.new} className="py-2 w-32 sm:w-64 xl:w-96 md:mt-5" />
+                <AllShopSection key={index} image={product.gambar} name={product.nama} price={product.price} stock={product.stock} isNew={product.new} className="py-2 w-36 sm:w-64 xl:w-96 md:mt-5 " />
               ))}
             </div>
           </div>

@@ -24,7 +24,7 @@ function AllProductListCard() {
         <div className="container mx-auto overflow-x-auto my-3">
           <div className="flex overflow-x-auto md:flex-wrap md:justify-evenly items-center cursor-pointer" data-aos="zoom-in" data-aos-duration="1000">
             {data.map((product, index) => (
-              <AllShopSection key={index} image={product.gambar} name={product.nama} price={product.price} stock={product.stock} isNew={product.new} />
+              <AllShopSection key={index} image={product.gambar} name={product.nama} price={product.price} stock={product.stock} isNew={product.new} className="w-64" />
             ))}
           </div>
         </div>
