@@ -42,14 +42,14 @@ function Header({ darkMode = false }) {
               </Link>
               <ul className="space-x-8 hidden md:flex">
                 <li>
-                  <a href="#home" className="font-semibold text-lg">
+                  <Link to="/" className="font-semibold text-lg">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#shop-all" className="font-semibold text-lg">
+                  <Link to="/collections/all-products" className="font-semibold text-lg">
                     Shop All
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="#new" className="font-semibold text-lg">

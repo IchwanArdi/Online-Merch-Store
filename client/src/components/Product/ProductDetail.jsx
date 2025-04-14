@@ -46,7 +46,7 @@ function ProductDetail() {
       </Helmet>
 
       <Header darkMode />
-      <motion.div className="px-6 py-10 max-w-7xl mx-auto xl:py-30" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+      <motion.div className="px-6 py-25 max-w-7xl mx-auto xl:py-30" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
         <Breadcrumb productName={product.name} />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 ">

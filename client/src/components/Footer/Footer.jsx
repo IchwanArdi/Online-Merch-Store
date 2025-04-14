@@ -46,8 +46,8 @@ export default function Footer() {
 
         <hr className="border-slate-700 my-10" />
 
-        <div className="flex justify-center">
-          <span className="text-center text-base text-white mb-10">© 2025 ICHWAN ARDI</span>
+        <div className="flex justify-center ">
+          <span className="text-center text-sm text-white mb-10">© 2025 ICHWAN ARDI</span>
         </div>
       </div>
     </section>
