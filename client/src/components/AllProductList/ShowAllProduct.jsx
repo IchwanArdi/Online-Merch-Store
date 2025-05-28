@@ -7,7 +7,7 @@ function ShowAllCollections() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch('https://server-production-45df.up.railway.app/randomAllShop/allproduct')
+    fetch('https://online-merch-store-production.up.railway.app/randomAllShop/allproduct')
       .then((res) => res.json())
       .then((result) => {
         setData(result);

@@ -23,7 +23,7 @@ function ProductDetail() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
     if (!location.state) {
-      fetch(`https://server-production-45df.up.railway.app/shop/slug/${slug}`)
+      fetch(`https://online-merch-store-production.up.railway.app/shop/slug/${slug}`)
         .then((res) => {
           if (!res.ok) throw new Error('Produk tidak ditemukan');
           return res.json();

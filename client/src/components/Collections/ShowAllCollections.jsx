@@ -9,7 +9,7 @@ function ShowAllCollections() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch('https://server-production-45df.up.railway.app/shop/allmerch') //https://server-production-45df.up.railway.app/shop/allmerch
+    fetch('https://online-merch-store-production.up.railway.app/shop/allmerch') //https://online-merch-store-production.up.railway.app/shop/allmerch
       .then((res) => res.json())
       .then((result) => {
         setData(result); // langsung dapat 5 terbaru dari backend
