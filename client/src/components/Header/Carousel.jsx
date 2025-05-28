@@ -74,7 +74,7 @@ export default function Carousel() {
   };
 
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full overflow-hidden ">
       <Header />
 
       {/* Slides */}
