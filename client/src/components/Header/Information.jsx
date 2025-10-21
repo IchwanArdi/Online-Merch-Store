@@ -1,9 +1,6 @@
-// eslint-disable-next-line no-unused-vars
-import { motion } from 'framer-motion';
-
 const About = () => {
   return (
-    <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+    <div>
       <section className="min-h-screen px-6 py-16 md:px-20 bg-gradient-to-br from-white to-gray-100 text-gray-800">
         <div className="max-w-4xl mx-auto space-y-8">
           <h1 className="text-4xl md:text-5xl font-extrabold text-center text-cyan-900">Tentang Website Ini</h1>
@@ -40,7 +37,7 @@ const About = () => {
           </div>
         </div>
       </section>
-    </motion.div>
+    </div>
   );
 };
 

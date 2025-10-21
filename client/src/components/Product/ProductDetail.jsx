@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
-// eslint-disable-next-line no-unused-vars
-import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import Breadcrumb from './Breadcrumb';
 import ProductInfo from './ProductInfo';
@@ -49,7 +47,7 @@ function ProductDetail() {
       </Helmet>
 
       <Header darkMode />
-      <motion.div className="px-6 py-25 max-w-7xl mx-auto xl:py-30" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+      <div className="px-6 py-25 max-w-7xl mx-auto xl:py-30">
         <Breadcrumb productName={product.name} />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 ">
@@ -61,7 +59,7 @@ function ProductDetail() {
 
         <PromoSection />
         <ProductCard />
-      </motion.div>
+      </div>
     </>
   );
 }
