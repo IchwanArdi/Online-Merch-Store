@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import Header from './Header';
+// Header sudah di-import di App.jsx, tidak perlu di-import lagi di sini
 import banner1 from '../../assets/Homepage_Banners.webp';
 import banner2 from '../../assets/1.webp';
 import banner3 from '../../assets/2.jpg';
@@ -75,8 +75,6 @@ export default function Carousel() {
 
   return (
     <div className="relative w-full overflow-hidden ">
-      <Header />
-
       {/* Slides */}
       <div
         className="flex transition-transform duration-700 ease-in-out"

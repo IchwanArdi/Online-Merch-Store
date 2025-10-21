@@ -29,7 +29,10 @@ function ProductDetail() {
           return res.json();
         })
         .then((data) => setFetchedProduct(data))
-        .catch((err) => setError(err.message))
+        .catch((err) => {
+          console.error('Error fetching product:', err);
+          setError(err.message);
+        })
         .finally(() => setLoading(false));
     } else {
       setLoading(false);

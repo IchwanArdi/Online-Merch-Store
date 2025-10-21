@@ -3,11 +3,20 @@ const mongoose = require('mongoose');
 // Schema dan Model (AllShop)
 const AllShopSchema = new mongoose.Schema({
   nama: String,
+  slug: { type: String, unique: true, sparse: true },
   gambar: String,
+  images: [String], // Array untuk multiple images
   price: Number,
   stock: Number,
   new: Boolean,
+  description: String,
+  category: String,
+  sizes: [String], // Array untuk available sizes
+  colors: [String], // Array untuk available colors
 });
+
+// Index untuk search performance
+AllShopSchema.index({ nama: 'text', description: 'text', category: 'text' });
 
 const AllShop = mongoose.model('AllShop', AllShopSchema); // ✅ Ini harus ada
 module.exports = AllShop;

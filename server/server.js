@@ -24,10 +24,12 @@ app.use(express.json()); // <--- agar bisa terima JSON dari frontend
 // Gunakan route
 const shopRoutes = require('./routes/shop');
 const randomAllShopRoutes = require('./routes/randomAllShop');
+const orderRoutes = require('./routes/order');
 
 // Routes setup
 app.use('/shop', shopRoutes);
 app.use('/randomAllShop', randomAllShopRoutes);
+app.use('/order', orderRoutes);
 
 const PORT = process.env.PORT || 3000;
 

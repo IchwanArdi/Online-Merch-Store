@@ -4,13 +4,22 @@ const mongoose = require('mongoose');
 const ShopSchema = new mongoose.Schema(
   {
     nama: String,
+    slug: { type: String, unique: true, sparse: true },
     gambar: String,
+    images: [String], // Array untuk multiple images
     price: Number,
     stock: Number,
     new: Boolean,
+    description: String,
+    category: String,
+    sizes: [String], // Array untuk available sizes
+    colors: [String], // Array untuk available colors
   },
   { timestamps: true } // <--- Ini nambahin createdAt & updatedAt otomatis
 );
+
+// Index untuk search performance
+ShopSchema.index({ nama: 'text', description: 'text', category: 'text' });
 
 const Shop = mongoose.model('Shop', ShopSchema);
 module.exports = Shop;

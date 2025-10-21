@@ -5,10 +5,12 @@ import Search from './Search';
 import CartList from './CartSidebar';
 import icon from '../../assets/information.svg';
 import { Link } from 'react-router-dom';
+import { useCart } from '../../context/CartContext';
 
 function Header({ darkMode = false }) {
   const [showSearch, setShowSearch] = useState(false);
   const [showCart, setShowCart] = useState(false);
+  const { totalItems } = useCart();
 
   const textColor = darkMode ? 'text-black' : 'text-white';
   const iconFilter = darkMode ? '' : 'invert';
@@ -33,10 +35,11 @@ function Header({ darkMode = false }) {
       {showSearch && <Search onClose={() => setShowSearch(false)} />}
       {showCart && <CartList onClose={() => setShowCart(false)} />}
 
-      <header className={`w-full absolute mx-auto z-10 xl:px-20 ${borderBottom}`}>
-        <div className="container mx-auto px-5 lg:px-20">
-          <div className={`flex py-5 items-center font-extrabold ${textColor}`}>
-            <nav className="flex items-center space-x-20">
+      <header className={`w-full absolute z-10 ${borderBottom}`}>
+        <div className="w-full px-4 sm:px-6 lg:px-8">
+          <div className={`flex justify-between items-center py-5 font-extrabold ${textColor}`}>
+            {/* Left side - Logo and Navigation */}
+            <div className="flex items-center space-x-8 lg:space-x-20">
               <Link to={'/'}>
                 <h1 className="font-bold text-base md:text-3xl cursor-pointer">ICHWAN ARDI</h1>
               </Link>
@@ -57,17 +60,15 @@ function Header({ darkMode = false }) {
                   </a>
                 </li>
               </ul>
-            </nav>
+            </div>
 
-            <div className="icon ml-auto flex">
-              <ul className="flex items-center space-x-8">
-                <li>
-                  <img src={search} alt="icon search" className={`w-7 md:w-10 filter cursor-pointer ${iconFilter}`} onClick={() => setShowSearch(true)} />
-                </li>
-                <li>
-                  <img src={cart} alt="icon cart" className={`w-7 md:w-10 filter cursor-pointer ${iconFilter}`} onClick={() => setShowCart(true)} />
-                </li>
-              </ul>
+            {/* Right side - Icons */}
+            <div className="flex items-center space-x-8">
+              <img src={search} alt="icon search" className={`w-7 md:w-10 filter cursor-pointer ${iconFilter}`} onClick={() => setShowSearch(true)} />
+              <div className="relative">
+                <img src={cart} alt="icon cart" className={`w-7 md:w-10 filter cursor-pointer ${iconFilter}`} onClick={() => setShowCart(true)} />
+                {totalItems > 0 && <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">{totalItems > 99 ? '99+' : totalItems}</span>}
+              </div>
             </div>
           </div>
         </div>
